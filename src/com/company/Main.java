@@ -8,11 +8,29 @@ public class Main {
         Animal dog = new Animal("canis","Pasztet");
         System.out.println("Pies nazywa się "+ dog.name);
         System.out.println("pies waży "+ dog.getWeight());
-        dog.feed();
-        dog.feed();
-        dog.feed();
-        dog.feed();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
+        dog.takeForAWalk();
         dog.feed();
         System.out.println("a po jedzonku "+ dog.getWeight());
+
+        Human me = new Human("Pioter", "Urban");
+        System.out.println(me.getWeight());
+        System.out.println(me.name);
+        me.takeForAWalk();
     }
 }

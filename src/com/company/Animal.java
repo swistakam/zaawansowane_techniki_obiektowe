@@ -28,9 +28,32 @@ public class Animal {
         return this.weight;
     }
 
+    private Boolean isAlive(){
+        if(this.alive && this.weight>0){
+            return true;
+        } else{
+            this.alive = false;
+            return false;
+        }
+    }
+
     public void  feed(){
-        this.weight += 0.1;
-        System.out.println("Mniam mniam");
+        if(isAlive()){
+            this.weight += 0.3;
+            System.out.println("Mniam mniam");
+        } else {
+            System.out.println("Idź się lecz zły człowieku");
+        }
+
+    }
+    public void takeForAWalk(){
+        if(isAlive()){
+            this.weight -=0.2;
+            System.out.println(this.name+ " chodź na spacerek!");
+        } else {
+            System.out.println("Chcesz wyprowadzać nieżywe zwierzę ty chory ... człowieku");
+        }
+
     }
 
 
