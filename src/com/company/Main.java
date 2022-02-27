@@ -12,6 +12,7 @@ public class Main {
         dog.feed();
         dog.feed();
         dog.feed();
+        dog.feed();
         System.out.println("a po jedzonku "+ dog.getWeight());
     }
 }
