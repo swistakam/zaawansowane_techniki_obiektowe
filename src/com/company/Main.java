@@ -34,7 +34,7 @@ public class Main {
         me.takeForAWalk();
 
         Car rakietaPredkosci = new Car("golf IV", "VW", 1.9);
-        System.out.println();
+        me.car = rakietaPredkosci;
 
 
 

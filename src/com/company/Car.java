@@ -3,8 +3,8 @@ package com.company;
 public class Car {
     final String model;
     final String producer;
-    final private Double engine;
-    final private Integer numberOfDoors;
+    private Double engine;
+    private Integer numberOfDoors;
     String equipment;
 
 
