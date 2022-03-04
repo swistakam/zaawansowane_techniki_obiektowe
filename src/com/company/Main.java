@@ -32,5 +32,11 @@ public class Main {
         System.out.println(me.getWeight());
         System.out.println(me.name);
         me.takeForAWalk();
+
+        Car rakietaPredkosci = new Car("golf IV", "VW", 1.9);
+        System.out.println();
+
+
+
     }
 }
