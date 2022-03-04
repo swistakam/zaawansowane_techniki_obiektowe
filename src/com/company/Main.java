@@ -35,7 +35,10 @@ public class Main {
 
         Car rakietaPredkosci = new Car("golf IV", "VW", 1.9);
         me.car = rakietaPredkosci;
-
+        Double test = me.getSalary();
+        me.setSalary(100.0);
+        test = me.getSalary();
+        test = me.getSalary();
 
 
     }

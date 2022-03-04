@@ -1,11 +1,16 @@
 package com.company;
 
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
+
 public class Human extends Animal{
 
     public String firstName;
     public String lastName;
     private Double salary;
     public Car car;
+    private Double previousSalary;
+    private String lastCheckTime;
 
     Human(String firstName, String lastName){
         super("Homo sapiens ", firstName + " " + lastName);
@@ -13,9 +18,18 @@ public class Human extends Animal{
         this.lastName = lastName;
     }
 
-    public void getSalary(){
-        System.out.println("Ostatni data pobranie wartości");
-        
+    public Double getSalary(){
+        if(lastCheckTime != null){
+           System.out.println("Ostatni data sprawdzenia to:" + lastCheckTime);
+            System.out.println("Wynosiła on wtedy: " + previousSalary);
+        }else{
+            System.out.println("Pierwsze sprawdzenie konta!");
+        }
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String formatDate = LocalDateTime.now().format(formatter);
+        lastCheckTime = formatDate;
+        previousSalary = salary;
+        return  salary;
     }
 
     public void setSalary(Double salary){
