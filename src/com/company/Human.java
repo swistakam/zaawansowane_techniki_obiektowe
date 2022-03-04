@@ -8,7 +8,7 @@ public class Human extends Animal{
     public String firstName;
     public String lastName;
     private Double salary;
-    public Car car;
+    private Car car;
     private Double previousSalary;
     private String lastCheckTime;
 
@@ -43,4 +43,19 @@ public class Human extends Animal{
         }
     }
 
+    public Car getCar(){
+        return car;
+    }
+
+    public void setCar(Car car){
+        if(salary > car.getPrice()){
+            System.out.println("Udało się kupić za gotówkę!");
+            this.car = car;
+        }else if(salary > (car.getPrice()/12)){
+            System.out.println("Udało się kupić ale co mam mówić... Masz teraz kredyt");
+            this.car =car;
+        }else{
+            System.out.println("zapisz się na studia i znajdź nową robotę albo idź po podwyżkę");
+        }
+    }
 }
