@@ -8,6 +8,7 @@ public class Phone extends Device {
     Double screenSize;
     final static Double appVersion = 2.0;
     final static String serverIP = "94.23.90.4";
+    final static Integer protocol = 21;
 
 
 
