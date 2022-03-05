@@ -2,6 +2,7 @@ package com.company;
 
 
 import com.company.devices.Car;
+import com.company.devices.Phone;
 
 public class Main {
 
@@ -34,18 +35,23 @@ public class Main {
         System.out.println(me.name);
         me.takeForAWalk();
 
-        Car rakietaPredkosci = new Car("golf IV", "VW", 1.9, 3000.0);
+        Car rakietaPredkosci = new Car("golf IV", "VW", 1.9, 3000.0, 1999);
         Double test = me.getSalary();
         me.setSalary(100.0);
         test = me.getSalary();
         test = me.getSalary();
-        Car rakietaPredkosciSecond = new Car("golf IV", "VW", 1.9, 3000.0);
+        Car rakietaPredkosciSecond = new Car("golf IV", "VW", 1.9, 3000.0, 1999);
         System.out.println(rakietaPredkosci.equals(rakietaPredkosciSecond));
         System.out.println(rakietaPredkosci);
         System.out.println(rakietaPredkosciSecond);
 
         System.out.println(me);
         System.out.println(dog);
+
+        Phone redmi5 = new Phone();
+
+        rakietaPredkosci.turnOn();
+        redmi5.turnOn();
 
     }
 }

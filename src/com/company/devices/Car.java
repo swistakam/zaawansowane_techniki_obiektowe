@@ -1,18 +1,17 @@
 package com.company.devices;
 
-public class Car {
-    final String model;
-    final String producer;
+public class Car extends Device {
     private Double engine;
     private Double price;
 
 
 
-    public Car(String model, String producer, Double engine, Double price) {
+    public Car(String model, String producer, Double engine, Double price, Integer yearOfProduction) {
         this.model = model;
         this.producer = producer;
         this.engine = engine;
         this.price = price;
+        this.yearOfProduction = yearOfProduction;
     }
 
     public Double getPrice() {
@@ -31,7 +30,14 @@ public class Car {
                 producer.equals(o.producer) &&
                 engine.equals(o.engine)&&
                 price.equals(o.price));
+    }
 
+    @Override
+    public void turnOn() {
+        System.out.println("Wkładasz kluczyk i przekręcasz do połowy");
+        System.out.println("Czekasz aż lampki zgasną");
+        System.out.println("Przekręcasz do końca ");
+        System.out.println("Silnik robi brrrrrrrrrr");
 
     }
 

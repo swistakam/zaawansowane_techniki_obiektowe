@@ -11,6 +11,6 @@ public class Phone extends Device {
         System.out.println("ooooooo");
         System.out.println("ooooooo");
         System.out.println("ooooooo");
-        System.out.println("elo");
+        System.out.println("Dzień dobry!");
     }
 }
