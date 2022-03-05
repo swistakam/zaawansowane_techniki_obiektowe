@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.devices.Car;
+
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 
@@ -58,4 +60,9 @@ public class Human extends Animal{
             System.out.println("zapisz się na studia i znajdź nową robotę albo idź po podwyżkę");
         }
     }
+
+    public String toString(){
+        return firstName+" "+lastName+" "+salary+" "+car+" "+previousSalary+" "+lastCheckTime;
+    }
+
 }

@@ -5,8 +5,8 @@ public class Animal {
     private static final Double DEFAULT_CAT_WEIGHT = 1.0;
     private static final Double DEFAULT_ANIMAL_WEIGHT = 2.0;
     final String species;
-    String name;
-    Integer age;
+    public String name;
+    private Integer age;
     private Double weight;
     private Boolean alive;
 
@@ -56,7 +56,9 @@ public class Animal {
 
     }
 
-
+    public String toString(){
+        return species+" "+name+" "+age+" "+weight+" "+alive;
+    }
 
 }
 
