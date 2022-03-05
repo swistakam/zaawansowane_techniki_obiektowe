@@ -14,7 +14,7 @@ public class Main {
         System.out.println("Pies nazywa się "+ dog.name);
         System.out.println("pies waży "+ dog.getWeight());
         dog.takeForAWalk();
-        dog.feed();
+        dog.feed2();
         System.out.println("a po jedzonku "+ dog.getWeight());
 
         Human me = new Human("Pioter", "Urban");

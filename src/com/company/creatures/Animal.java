@@ -1,6 +1,6 @@
 package com.company.creatures;
 
-public abstract class Animal {
+public abstract class Animal implements Feedable {
     private static final Double DEFAULT_DOG_WEIGHT = 3.0;
     private static final Double DEFAULT_CAT_WEIGHT = 1.0;
     private static final Double DEFAULT_ANIMAL_WEIGHT = 2.0;
@@ -37,7 +37,7 @@ public abstract class Animal {
         }
     }
 
-    public void  feed(){
+    public void  feed2(){
         if(isAlive()){
             this.weight += 0.3;
             System.out.println("Mniam mniam");
@@ -69,6 +69,16 @@ public abstract class Animal {
             System.out.println("Tranzakcja został sfinalizowana");
         }
     }
+
+    @Override
+    public void feed() {
+
+    }
+    @Override
+    public void feed(int foodWeight){
+
+    }
+
 
     public String toString(){
         return species+" "+name+" "+age+" "+weight+" "+alive;
