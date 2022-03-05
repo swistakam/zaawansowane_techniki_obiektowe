@@ -56,6 +56,20 @@ public class Animal {
 
     }
 
+    public void sall(Human seller, Human buyer, Double price){
+        if(seller.animal == null){
+            System.out.println("Sprzedającu nie posiada zwierzaka");
+        }else if(price > buyer.getCash()){
+            System.out.println("Braki mamony zawszę bolą");
+        }else{
+            buyer.animal = seller.animal;
+            seller.animal = null;
+            seller.setCash(seller.getCash()+price);
+            buyer.setCash(buyer.getCash()-price);
+            System.out.println("Tranzakcja został sfinalizowana");
+        }
+    }
+
     public String toString(){
         return species+" "+name+" "+age+" "+weight+" "+alive;
     }

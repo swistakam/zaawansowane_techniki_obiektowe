@@ -11,22 +11,6 @@ public class Main {
         System.out.println("Pies nazywa się "+ dog.name);
         System.out.println("pies waży "+ dog.getWeight());
         dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
-        dog.takeForAWalk();
         dog.feed();
         System.out.println("a po jedzonku "+ dog.getWeight());
 
@@ -52,6 +36,16 @@ public class Main {
 
         rakietaPredkosci.turnOn();
         redmi5.turnOn();
+
+        Human romek = new Human("Romuald", "Stefaniak");
+        romek.setCash(1000.0);
+        romek.animal = dog;
+        Human jaro = new Human("Jarek", "Psikuta");
+        jaro.setCash(3000.0);
+
+        romek.sall(romek,jaro,750.0);
+        System.out.println(romek.toString());
+        System.out.println(jaro.toString());
 
     }
 }

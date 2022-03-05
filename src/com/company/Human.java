@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.devices.Car;
+import com.company.devices.Phone;
 
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
@@ -13,6 +14,9 @@ public class Human extends Animal{
     private Car car;
     private Double previousSalary;
     private String lastCheckTime;
+    private Double cash;
+    public Phone phone;
+    public Animal animal;
 
     Human(String firstName, String lastName){
         super("Homo sapiens ", firstName + " " + lastName);
@@ -61,8 +65,18 @@ public class Human extends Animal{
         }
     }
 
+
+
     public String toString(){
-        return firstName+" "+lastName+" "+salary+" "+car+" "+previousSalary+" "+lastCheckTime;
+        return firstName+" "+lastName+" "+salary+" "+car+" "+previousSalary+" "+lastCheckTime+" "+animal+" "+cash;
+
     }
 
+    public Double getCash() {
+        return cash;
+    }
+
+    public void setCash(Double cash) {
+        this.cash = cash;
+    }
 }
