@@ -13,4 +13,7 @@ public class Phone extends Device {
         System.out.println("ooooooo");
         System.out.println("Dzień dobry!");
     }
+    public String toString(){
+        return model+" "+yearOfProduction+" "+producer;
+    }
 }
