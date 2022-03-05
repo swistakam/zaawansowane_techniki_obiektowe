@@ -1,12 +1,13 @@
-package com.company;
+package com.company.creatures;
 
+import com.company.creatures.Animal;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 
-public class Human extends Animal{
+public class Human extends Animal {
 
     public String firstName;
     public String lastName;
@@ -18,7 +19,7 @@ public class Human extends Animal{
     public Phone phone;
     public Animal animal;
 
-    Human(String firstName, String lastName){
+    public Human(String firstName, String lastName){
         super("Homo sapiens ", firstName + " " + lastName);
         this.firstName = firstName;
         this.lastName = lastName;
@@ -69,6 +70,11 @@ public class Human extends Animal{
 
     public String toString(){
         return firstName+" "+lastName+" "+salary+" "+car+" "+previousSalary+" "+lastCheckTime+" "+animal+" "+cash;
+
+    }
+
+    @Override
+    public void beEaten() {
 
     }
 

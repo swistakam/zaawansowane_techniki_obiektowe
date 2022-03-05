@@ -1,6 +1,6 @@
-package com.company;
+package com.company.creatures;
 
-public class Animal {
+public abstract class Animal {
     private static final Double DEFAULT_DOG_WEIGHT = 3.0;
     private static final Double DEFAULT_CAT_WEIGHT = 1.0;
     private static final Double DEFAULT_ANIMAL_WEIGHT = 2.0;
@@ -74,5 +74,6 @@ public class Animal {
         return species+" "+name+" "+age+" "+weight+" "+alive;
     }
 
+    public abstract void beEaten();
 }
 

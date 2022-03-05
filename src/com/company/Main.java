@@ -1,13 +1,16 @@
 package com.company;
 
 
+import com.company.creatures.Animal;
+import com.company.creatures.Human;
+import com.company.creatures.Pet;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
 public class Main {
 
     public static void main(String[] args) {
-        Animal dog = new Animal("canis","Pasztet");
+        Pet dog = new Pet("canis","Pasztet");
         System.out.println("Pies nazywa się "+ dog.name);
         System.out.println("pies waży "+ dog.getWeight());
         dog.takeForAWalk();
