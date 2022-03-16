@@ -56,7 +56,7 @@ public abstract class Animal implements Feedable {
 
     }
 
-    public void sall(Human seller, Human buyer, Double price){
+    public void sell(Human seller, Human buyer, Double price){
         if(seller.animal == null){
             System.out.println("Sprzedającu nie posiada zwierzaka");
         }else if(price > buyer.getCash()){

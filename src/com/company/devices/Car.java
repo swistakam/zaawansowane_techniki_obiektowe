@@ -1,9 +1,9 @@
 package com.company.devices;
 
-public class Car extends Device {
-    private Double engine;
-    private Double price;
+import com.company.creatures.Human;
 
+public abstract class Car extends Device {
+    private Double engine;
 
 
     public Car(String model, String producer, Double engine, Double price, Integer yearOfProduction) {
@@ -22,13 +22,14 @@ public class Car extends Device {
     public boolean equals(Object object) {
         if (this == object) {
             return true;
-        }if (object == null || getClass() != object.getClass()) {
+        }
+        if (object == null || getClass() != object.getClass()) {
             return false;
         }
         Car o = (Car) object;
-        return  (model.equals(o.model) &&
+        return (model.equals(o.model) &&
                 producer.equals(o.producer) &&
-                engine.equals(o.engine)&&
+                engine.equals(o.engine) &&
                 price.equals(o.price));
     }
 
@@ -41,7 +42,26 @@ public class Car extends Device {
 
     }
 
-    public String toString(){
-        return model+" "+producer+" "+engine+" "+price;
+    public void sellCar(Human seller, Human buyer, Double price) throws Exception {
+        if (!seller.hasACar(this)) {
+            throw new Exception("Sprzedającu nie posiada samochodu");
+        }
+        if (price > buyer.getCash()) {
+            throw new Exception("Braki mamony boli przez całe życie");
+        }
+        if (!buyer.hasFreeParkingLot()) {
+            throw new Exception("Masz za dużo aut a za mały garaż...");
+        }
+        buyer.addCar(this);
+        seller.animal = null;
+        seller.setCash(seller.getCash() + price);
+        buyer.setCash(buyer.getCash() - price);
+        System.out.println("Tranzakcja został sfinalizowana");
     }
+
+    public String toString() {
+        return model + " " + producer + " " + engine + " " + price;
+    }
+
+    public abstract void refuel();
 }
