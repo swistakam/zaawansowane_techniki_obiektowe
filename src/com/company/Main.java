@@ -1,6 +1,8 @@
 package com.company;
 
 
+import com.company.creatures.Animal;
+import com.company.creatures.FoodType;
 import com.company.creatures.Human;
 import com.company.creatures.Pet;
 import com.company.devices.Car;
@@ -14,7 +16,9 @@ public class Main {
         System.out.println("Pies nazywa się "+ dog.name);
         System.out.println("pies waży "+ dog.getWeight());
         dog.takeForAWalk();
-        dog.feed2();
+        dog.feed2(1.0,FoodType.ALL);
+        dog.feed2(2.0,FoodType.MEET);
+        dog.feed2(2.0,FoodType.MEET);
         System.out.println("a po jedzonku "+ dog.getWeight());
 
         Human me = new Human("Pioter", "Urban");
@@ -50,7 +54,8 @@ public class Main {
         System.out.println(romek.toString());
         System.out.println(jaro.toString());
 
-
+        Phone nokia = new Phone();
+        nokia.operationSystem = Phone.OperationSystem.WINDOWS_MOBILE;
 
     }
 }
