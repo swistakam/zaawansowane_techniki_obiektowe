@@ -10,4 +10,6 @@ public abstract class Device {
     abstract public void turnOn();
 
     abstract public String toString();
+
+
 }

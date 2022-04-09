@@ -18,6 +18,16 @@ public abstract class Car extends Device {
         return price;
     }
 
+    public Double getGarageValue(Car[] garage){
+        int x = 0;
+        double sum = 0.0;
+        while (garage.length < x){
+           sum =+ garage[x].price;
+           x++;
+        }
+        return sum;
+    }
+
     @Override
     public boolean equals(Object object) {
         if (this == object) {
