@@ -9,6 +9,10 @@ import com.company.devices.Car;
 import com.company.devices.Disel;
 import com.company.devices.Phone;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -56,6 +60,31 @@ public class Main {
 
         Phone nokia = new Phone();
         nokia.operationSystem = Phone.OperationSystem.WINDOWS_MOBILE;
+
+        System.out.println(Country.ALBANIA.getGDPinPLN());
+        System.out.println(Country.POLAND.getGDPinPLN());
+
+        Map<String, Country> capitals = new HashMap<>();
+        capitals.put("Warsaw", Country.POLAND);
+        capitals.put("Kuvendi", Country.ALBANIA);
+        capitals.put("Luanda",Country.ANGOLA);
+
+        Map<Country, Double> countryArea = new HashMap<>();
+        countryArea.put(Country.POLAND,312696.0);
+        countryArea.put(Country.ALBANIA,28748.0);
+        countryArea.put(Country.ANGOLA,1246700.0);
+        countryArea.put(Country.COLOMBIA,1139825.0);
+        countryArea.put(Country.USA,9833520.0);
+
+        TreeMap<Country, Double> sorted = new TreeMap<>();
+        sorted.putAll(countryArea);
+        System.out.println(sorted);
+
+        Double biggest;
+        for (Map.Entry<Country,Double> x: countryArea.entrySet()) {
+            Double value = x.getValue();
+        }
+
 
     }
 }
