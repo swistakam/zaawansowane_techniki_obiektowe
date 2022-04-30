@@ -37,6 +37,7 @@ public class Human extends Animal {
 
     public void setCar(Car newCar, Integer parkingLotNumber) {
         this.garage[parkingLotNumber] = newCar;
+        newCar.carOwners.add(this.firstName);
     }
 
     public Car getCar(Integer parkingLotNumber) {
@@ -137,6 +138,7 @@ public class Human extends Animal {
         for (int i = 0; i < garage.length; i++) {
             if (garage[i] == null) {
                 garage[i] = newCar;
+                newCar.carOwners.add(this.firstName);
                 break;
             }
             //TODO: Do

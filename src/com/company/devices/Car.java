@@ -2,8 +2,11 @@ package com.company.devices;
 
 import com.company.creatures.Human;
 
+import java.util.List;
+
 public abstract class Car extends Device {
     private Double engine;
+    public List<String> carOwners;
 
 
     public Car(String model, String producer, Double engine, Double price, Integer yearOfProduction) {
@@ -62,6 +65,9 @@ public abstract class Car extends Device {
         if (!buyer.hasFreeParkingLot()) {
             throw new Exception("Masz za dużo aut a za mały garaż...");
         }
+        if(this.carOwners.get(this.carOwners.size()-1)!=seller.firstName){
+            throw new Exception("Panie a gdzie dowód zakupy???");
+        }
         buyer.addCar(this);
         seller.animal = null;
         seller.setCash(seller.getCash() + price);
@@ -74,4 +80,27 @@ public abstract class Car extends Device {
     }
 
     public abstract void refuel();
+
+    public Boolean checkWasOwner(Human human){
+        for(int i=0; this.carOwners.size()<i; i++){
+            if(this.carOwners.get(i)==human.firstName){
+                return true;
+            }
+        }
+        return false;
+    }
+    public Boolean checkTransactionOwner(Human seller, Human buyer){
+        for(int i=0; this.carOwners.size()<i; i++) {
+            if(this.carOwners.get(i)==seller.firstName){
+                if(this.carOwners.get(i+1)==buyer.firstName){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    public Integer allTransaction(){
+        return this.carOwners.size()-1;
+    }
+
 }
