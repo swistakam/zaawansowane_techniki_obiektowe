@@ -82,7 +82,7 @@ public abstract class Car extends Device {
     public abstract void refuel();
 
     public Boolean checkWasOwner(Human human){
-        for(int i=0; this.carOwners.size()<i; i++){
+        for(int i=0; this.carOwners.size()-1 <= i; i++){
             if(this.carOwners.get(i)==human.firstName){
                 return true;
             }
@@ -90,7 +90,7 @@ public abstract class Car extends Device {
         return false;
     }
     public Boolean checkTransactionOwner(Human seller, Human buyer){
-        for(int i=0; this.carOwners.size()<i; i++) {
+        for(int i=0; this.carOwners.size()-1 <= i; i++) {
             if(this.carOwners.get(i)==seller.firstName){
                 if(this.carOwners.get(i+1)==buyer.firstName){
                     return true;
